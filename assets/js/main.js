@@ -76,10 +76,11 @@ $("#content h1, h2").each(function(i1){
 	  var pillId = pill.attr('id');
 	  var qs = parse_querystring()['sel' + i1];
 	  var cl = (qs && qs === pillId) || (!qs && i2 === 0) ? "active pill-div" : "pill-div";
-    	  var cl2 = (qs && qs === pillId) || (!qs && i2 === 0) ? ' class="active"' : '';
+		var cl2 = (qs && qs === pillId) || (!qs && i2 === 0) ? ' class="active nav-item"' : ' class="nav-item"';
+		var cl3 = (qs && qs === pillId) || (!qs && i2 === 0) ? "active nav-link" : "nav-link";
 	  var tg = set_querystring_arg('sel' + i1, pillId, true);
 	  pill.nextUntil("h1, h2, h3.makepill").wrapAll('<div id="pill_'+i1+'_'+i2+'" class="'+cl+'"></div>');
-	  var pillLi = $('<li'+cl2+'><a href="' + tg + '">'+pill.text()+'</a></li>');
+	  var pillLi = $('<li'+cl2+'><a href="' + tg + '" class="' + cl3 + '">'+pill.text()+'</a></li>');
 	  if (qs && qs === pillId && i2 !== 0) {
 	  	$('link[rel="canonical"]').attr('href', 'https://www.futuresbacktest.com' + tg);
 	  }

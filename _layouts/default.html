@@ -2,7 +2,7 @@
     <main>
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-3 p-1">
                     <ul id="menu-nav">
                         {% for item in site.data.docs %}
                             <li>
@@ -17,7 +17,7 @@
                         {% endfor %}
                     </ul>
                 </div>
-                <div class="col-md-9">
+                <div class="col-md-9 p-1">
                   <ol class="breadcrumb">
 {% if page.url == '/docs/' %}
            <li class="breadcrumb-item"><a href="{{ site.baseurl }}/docs/">Docs</a></li>
