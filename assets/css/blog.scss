@@ -52,7 +52,7 @@ figcaption {
 }
 
 main {
-  min-height: 80vh;
+  min-height: calc(100vh - 140px);
 }
 
 .PageNavigation {
@@ -79,7 +79,6 @@ main {
   	width: 100%;
   	overflow: hidden;
   	position: relative;
-  	top: -21px;
   }
 
   #deco-1 {
