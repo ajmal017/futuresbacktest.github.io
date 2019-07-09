@@ -1,0 +1,14 @@
+left:
+    -   text: "Overview"
+        url: "https://www.futuresbacktest.com/overview"
+    -   text: "Explore"
+        url: "https://www.futuresbacktest.com/explore"
+    -   text: "Backtest"
+        url: "https://www.futuresbacktest.com/backtest"
+    -   text: "Run"
+        url: "https://www.futuresbacktest.com/run"
+right:
+    -   text: "About"
+        url: "https://www.futuresbacktest.com/about"
+    -   text: "Login"
+        url: "https://www.futuresbacktest.com/login"

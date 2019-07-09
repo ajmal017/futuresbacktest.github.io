@@ -1,0 +1,106 @@
+---
+---
+
+main {
+  margin-top: 70px;
+  #menu-nav {
+    list-style: none;
+    padding: 0;
+    li {
+      margin: 0 0 .3em 0;
+      a {
+        display: block;
+        width: 100%;
+        padding: .5em;
+      }
+      a:hover, a.selected{
+        background: rgb(229, 231, 233);
+        text-decoration: none;
+      }
+      h4 {
+        padding:.4em;
+        margin: 0;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        li {
+          a {
+            padding: .1em .5em .1em 1.5em;
+          }
+        }
+      }
+    }
+  }
+}
+
+main.posts {
+  margin-top: 0;
+}
+
+.navbar {
+  padding: 10px 16px 9px 16px;
+}
+.navbar-nav > a {
+  margin-left: 15px;
+}
+
+.navbar-brand {
+  font-family: "Roboto";
+  padding-left: 50px;
+  height: 35px;
+  margin-top: -7px;
+  background-image: url('/assets/icons/icon-white.png');
+  background-size: 24px 24px;
+  background-position: 15px 6px;
+  background-repeat: no-repeat;
+  font-size: 1.4em;
+}
+
+.navbar-brand:hover, .navbar-brand:focus {
+  color: #18BC9C !important;
+  background-image: url('/assets/icons/icon-green.png');
+}
+
+.navbar.fixed-top {
+    box-shadow: 0px 1px 9px 1px #00000069;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+body {
+  font-family: "Open Sans";
+  font-size: 14px;
+  height: 100%;
+}
+
+#disqus_thread {
+  margin-top: 5em;
+  margin-bottom: 0;
+}
+
+#footer {
+  background-color: #5a5f5f;
+  width: 100%;
+  overflow: auto;
+  margin-top: 3em;
+}
+
+#footer div {
+  color: white;
+  text-align: center;
+  margin: 1em auto; }
+
+#footer div a{
+  color: white;}
+
+#footer div a:hover{
+  color: white;
+  text-decoration: underline;
+}
+
+.cit-title {
+  font-style: italic;
+}

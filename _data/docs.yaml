@@ -1,0 +1,23 @@
+- title: Introduction
+  url: /docs/
+- title: Getting started
+  url: /docs/getting-started/
+- title: Pages
+- title: Overview
+  url: /docs/overview/
+- title: Explore
+  url: /docs/explore/
+- title: Backtest
+  url: /docs/backtest/
+- title: Portfolio construction
+- title: The contracts
+  url: /docs/contracts/
+- title: The strategies
+  url: /docs/strategies/
+- title: About
+- title: Terms of service
+  url: /docs/terms/
+- title: Credits
+  url: /docs/credits/
+- title: Bibliography
+  url: /docs/biblio/

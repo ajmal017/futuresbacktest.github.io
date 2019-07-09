@@ -1,0 +1,43 @@
+- authors: Y. Lempérière, C. Deremble, P. Seager, M. Potters and J. P. Bouchaud
+  title: "Two centuries of trend following"
+  publication: arXiv.org
+  url: https://arxiv.org/abs/1404.3274
+  key: lamperiere2014
+  tags: 
+    - "Trend"
+  
+- authors: Vineer Bhansali, Josh Davis, Matt Dorsten and Graham A. Rennison
+  title: "Carry and Trend in Lots of Places"
+  publication: "The Journal of Portfolio Management, Summer 2015"
+  url: https://www.pimco.com/en-us/insights/viewpoints/in-depth/carry-and-trend-in-lots-of-places/
+  key: bhansali2015
+  tags: 
+    - "Trend"
+    - "Carry"
+  
+- authors: Andrew Sheets, Phanikiran L. Naraparaju, Serena W. Tang, Wanting Low and Elizabeth Volynsky
+  title: "Cross Asset Quant: Why We Like Carry"
+  publication: "Morgan Stanley Research, September 2016"
+  url: https://www.morganstanley.com/ideas/cross-asset-carry-strategy
+  key: morganstanley2016
+  tags:
+    - "Carry"
+    
+- authors: Boris Gnedenko and Igor Yelnik
+  title: "Dynamic Risk Allocation with Carry, Value and Momentum"
+  publication: "Journal of Investment Strategies, Vol.6(1), 2016, pp.25-45"
+  url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2357894
+  key: gnedenko2016
+  tags: 
+    - "Trend"
+    - "Carry"
+    - "Value"
+    - "Allocation"
+  
+- authors: Ralph S. J. Koijen, Tobias J. Moskowitz, Lasse H. Pedersen and Evert B. Vrugt
+  title: Carry
+  publication: Journal of Financial Economics, 2016
+  url: https://www.aqr.com/Insights/Research/Journal-Article/Carry
+  key: aqr2016
+  tags: 
+    - "Carry"

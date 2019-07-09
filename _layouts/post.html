@@ -1,0 +1,50 @@
+{% include header.html type="blog" %}
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                  <div id="blog-content">
+                    <h1>{{page.title}}</h1>
+                    {% if page.last_modified_at %}
+                    <span class="post-details">{{page.date | date: '%B %-d, %Y' }} (updated on {{page.last_modified_at | date: '%B %-d, %Y' }}), by {{page.author}}</span>
+                    {% else %}
+                    <span class="post-details">{{page.date | date: '%B %-d, %Y' }}, by {{page.author}}</span>
+                    {% endif %}
+                    {% if page.image %}
+                    <figure>
+                        <img src="{{page.image}}" class="img-responsive" alt="{{page.image-alt}}" />
+                        <figcaption>{{page.image-caption}}</figcaption>
+                     </figure>
+                    {% endif %}
+                  {{ content }}
+                  </div>
+                  <div class="PageNavigation">
+  {% if page.previous.url %}
+    <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+  {% endif %}
+  {% if page.next.url %}
+    <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+  {% endif %}
+</div>
+                  <div id="disqus_thread"></div>
+                  <script>
+var disqus_config = function () {
+this.page.url = "{{ site.url }}{{ page.permalink }}";
+this.page.identifier = "{{ page.title }}";
+};
+(function() {
+var d = document, s = d.createElement('script');
+s.src = 'https://futuresbacktest.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+                </script>
+                <noscript>Please enable JavaScript.</noscript>
+              </div>
+              <div class="col-md-2"></div>
+            </div>
+        </div>
+    </main>
+
+{% include footer.html %}

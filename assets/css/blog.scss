@@ -1,0 +1,133 @@
+---
+---
+
+h1,h2,h3,h4{
+	font-family:"PT Sans", sans-serif;
+	font-weight:700}
+h1{
+	font-size: 36px;
+  	margin-top: .3em;
+}
+h2{
+	font-size:26px;
+}
+h2 a {
+  color: rgb(44, 62, 80) !important;
+}
+h3{
+	font-size:19px}
+
+#blog-content p{
+	font-family:"PT Serif", serif;
+	font-size:1.3em;
+	line-height:1.5;
+	margin:.5em 0 1em 0}
+.post-excerpt{
+	font-family:"PT Serif", serif;
+	font-size:1.3em;line-height:1.5}
+
+.post-details {
+  font-size: 1.1em;
+}
+
+figure {
+  margin: 2em 0 2em 0;
+}
+
+figcaption {
+	font-size: 90%;
+}
+
+.footnotes {
+  font-size: 80%;
+  margin-top: 5em;
+}
+
+.footnotes::before {
+    content: "";
+    display: block;
+    border-top: 2px solid #2c3e50;
+    height: 1em;
+    width: 25%;
+}
+
+main {
+  min-height: 80vh;
+}
+
+.PageNavigation {
+  font-size: 14px;
+  display: block;
+  width: auto;
+  overflow: hidden;
+}
+
+.PageNavigation a {
+  display: block;
+  width: 50%;
+  float: left;
+  margin: 1em 0;
+}
+
+.PageNavigation a.next {
+	float: right;
+  text-align: right;
+}
+
+@media screen and (min-width: 992px) {
+  main.posts {
+  	width: 100%;
+  	overflow: hidden;
+  	position: relative;
+  	top: -21px;
+  }
+
+  #deco-1 {
+  	background: #2c3e50;
+  	width: 120vw;
+  	height: 8em;
+  	position: absolute;
+  	top: -6em;
+  	transform: rotate(2deg);
+  	transform-origin: top left;
+  	z-index: 4;
+  }
+  #deco-2 {
+  	background-image: url(https://www.futuresbacktest.com/static/media/splash-large.2066afef.jpg);
+      background-size: cover;
+      background-position: 50% 45%;
+  	top: 1em;
+  	width: 100vw;
+  	height: 40em;
+  	position: absolute;
+
+  	z-index: 2
+  }
+  #deco-3 {
+  	background: rgba(0,94,189,.3);
+  	top: 1em;
+  	width: 100vw;
+  	height: 40em;
+  	position: absolute;
+  	z-index: 3;
+  }
+
+  #deco-4 {
+  	background: white;
+  	width: 120vw;
+  	height: 20em;
+  	position: absolute;
+  	top: 30em;
+  	transform: rotate(-2deg);
+  	z-index: 4;
+  }
+  #content {
+  	background: white;
+  	padding: 1em 1.5em 1em 1.5em;
+  	top: 1em;
+  	position: relative;
+  	min-height: 70vh;
+  	z-index: 4;
+  }
+
+}

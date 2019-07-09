@@ -1,0 +1,75 @@
+{% include header.html type="docs" %}
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <ul id="menu-nav">
+                        {% for item in site.data.docs %}
+                            <li>
+                              {% if item.url %}
+                              <a href="{{ item.url }}"  {% if item.url==page.permalink %} class="selected" {% endif %}>
+                                {{ item.title }}
+                              </a>
+                              {% else %}
+                              <h4>{{ item.title }}</h4>
+                              {% endif %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="col-md-9">
+                  <ol class="breadcrumb">
+{% if page.url == '/docs/' %}
+           <li class="breadcrumb-item"><a href="{{ site.baseurl }}/docs/">Docs</a></li>
+           <li class="breadcrumb-item active">Introduction</li>
+{% else %}
+    {% assign splitted_url_parts = page.url | split: '/' %}
+    {% capture forLoopMaxInt %}{{ splitted_url_parts.size | minus:0 }}{% endcapture %}
+    {% assign next_prepender = '/' %}
+    {% for i in (1..forLoopMaxInt) %}
+        {% capture current_breadcrumb_url %}{{ next_prepender }}{{ splitted_url_parts[i] }}/{% endcapture %}
+        {% assign next_prepender = current_breadcrumb_url %}
+        {% for breadcrumb_page in site.pages %}
+            {% if current_breadcrumb_url == breadcrumb_page.url %}
+               {% if page.url == current_breadcrumb_url %}
+                    <li class="breadcrumb-item active">{{breadcrumb_page.title}}</li>
+               {% else %}
+                    <li class="breadcrumb-item">
+                        <a href="{{ site.baseurl }}{{current_breadcrumb_url}}">
+                        {% if current_breadcrumb_url == '/docs/' %}Docs{% else %}{{breadcrumb_page.title}}{% endif %}
+                         </a>
+                    </li>
+               {% endif %}
+            {% endif %}
+        {% endfor %}
+    {% endfor %}           
+{% endif %}
+                  </ol>
+                  <div id="content">
+                  {{ content }}
+                  </div>
+                  {% if page.disablecomments %}
+                  {% else %}
+                  <div id="disqus_thread"></div>
+                  <script>
+var disqus_config = function () {
+this.page.url = "{{ site.url }}{{ page.permalink }}";
+this.page.identifier = "{{ page.title }}";
+};
+(function() {
+var d = document, s = d.createElement('script');
+s.src = 'https://futuresbacktest.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+                </script>
+                <noscript>Please enable JavaScript.</noscript>
+                {% endif %}
+              </div>
+            </div>
+        </div>
+    </main>
+<script src="/assets/js/main.js"></script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+{% include footer.html %}
