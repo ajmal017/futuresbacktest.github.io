@@ -13,7 +13,7 @@ This page allows you backtesting and visualizing futures contracts portfolios wi
 The backtest parameters zone allows you setting all the parameters that define a backtesting simulation. For each of your portfolios you can chose assets and strategies to combine, weighting rules, rebalancing options, risk management and rounding parameters.
 Start by chosing a portfolio to edit or create a new portfolio or duplicate an existing one. You can backtest and save your changes at any time by clicking on the Save & Backtest main button. Other options are available from the dropdown menu of this button.
 
-![Backtest parameters](/assets/capture1.jpg){: .img-responsive}
+![Backtest parameters](/assets/capture1.jpg){: .img-fluid}
 
 {: .makepill}
 ### General Settings
