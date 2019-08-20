@@ -1,295 +1,295 @@
 - code: ASX/AP
-    ticker: SPI (10), MSPI (5)
-    name:  Ausralia S&P/ASX 200 Index
-    class: Equity
-    country: Australia
-    currency: AUD
-    specs: https://www.asx.com.au/documents/products/ASX-SPI-200-and-MINI-SPI-200-Brochure-December-2015.pdf
-    description: ASX SPI 200 and mini-SPI 200 futures contracts are the benchmark equity derivatives products in Australia. Their underlying is S&P/ASX 200 Index, wich is composed of the 200 largest listed companies in Australia. The large contract (SPI) is arround USD 40k while the smaller one (MSPI) is half this size.
+  ticker: SPI (10), MSPI (5)
+  name:  Ausralia S&P/ASX 200 Index
+  class: Equity
+  country: Australia
+  currency: AUD
+  specs: https://www.asx.com.au/documents/products/ASX-SPI-200-and-MINI-SPI-200-Brochure-December-2015.pdf
+  description: ASX SPI 200 and mini-SPI 200 futures contracts are the benchmark equity derivatives products in Australia. Their underlying is S&P/ASX 200 Index, wich is composed of the 200 largest listed companies in Australia. The large contract (SPI) is arround USD 40k while the smaller one (MSPI) is half this size.
 
-  - code: ASX/YT
-    ticker:
-    name: Australia 10-year Government Bonds
-    class: Bonds
-    country: Australia
-    currency: AUD
-    hide: true
+- code: ASX/YT
+  ticker:
+  name: Australia 10-year Government Bonds
+  class: Bonds
+  country: Australia
+  currency: AUD
+  hide: true
 
-  - code: CME/AD
-    ticker: AD (100K), M6A (10K)
-    name: Australian Dollar
-    class: FX
-    currency: USD
-    specs: https://www.cmegroup.com/trading/fx/g10/australian-dollar_contract_specifications.html
-    description: AD and M6A are futures contracts on the Australian Dollar (AUD) / USD exchange rate. The notional value of the large contract (AD) is AUD 100K, while the smaller one (M6A) has a more manageable size of AUD 10k.
+- code: CME/AD
+  ticker: AD (100K), M6A (10K)
+  name: Australian Dollar
+  class: FX
+  currency: USD
+  specs: https://www.cmegroup.com/trading/fx/g10/australian-dollar_contract_specifications.html
+  description: AD and M6A are futures contracts on the Australian Dollar (AUD) / USD exchange rate. The notional value of the large contract (AD) is AUD 100K, while the smaller one (M6A) has a more manageable size of AUD 10k.
 
-  - code: CME/BP
-    ticker: GBP (62.5K), M6B (6.25K)
-    name: British Pound
-    class: FX
-    currency: USD
-    specs: https://www.cmegroup.com/trading/fx/g10/british-pound_contract_specifications.html    
-    description: GBP and M6B are futures contracts on the British Pound (GBP) / USD exchange rate. The multiplier of the large contract (GBP) is GBP 62.5K, while the smaller one (M6B) is worth a tenth of it at GBP 6.25K.
-    
-  - code: CME/BR
-    ticker: BRE (100K)
-    name: Brazilian Real
-    class: FX
-    currency: USD
-    specs: https://www.cmegroup.com/trading/fx/emerging-market/brazilian-real_contract_specifications.html
-    description: BRE is a futures contract for 100K Brazilian Reals in USD. 
-    
-  - code: CME/C
-    ticker: ZC (5000), YC (1000)
-    name: Corn
-    class: Agriculture
-    currency: USD
-    specs: https://www.cmegroup.com/trading/agricultural/grain-and-oilseed/corn_contract_specifications.html
-    description: ZC and YC are futures contracts on corn. Futures contracts on corn are among the earliest futures contracts and price data dates back to 1959. The smaller contract YC offers quite a low liquidity compared to ZC, which still has a very manageable size, around USD 18K.
-    
-  - code: CME/CD
-    ticker: CAD (100K), MCD (10K)
-    name: Canadian Dollar
-    class: FX
-    currency: USD
-    specs: https://www.cmegroup.com/trading/fx/g10/canadian-dollar_contract_specifications.html
-    description: CAD and MCD are futures contracts on the Canadian Dollar (CAD) / USD exchange rate. The multiplier of the large contract (CAD) is CAD 100K, while the smaller one (MCD) is worth a tenth of it at CAD 10K.
-    
-  - code: CME/CL
-    ticker: QM (500), CL (1K)
-    name: West Texas Intermediate (WTI) Crude Oil
-    class: Energy
-    currency: USD
-    specs: https://www.cmegroup.com/trading/energy/crude-oil/light-sweet-crude_contractSpecs_futures.html
-    description: CL and QM are futures contracts on respectively 1000 and 500 barrels of crude oil to be delivered at Cushing, Oklahoma. 
-    
-  - code: CME/EC
-    ticker: EUR (125K), M6E (12.5K)
-    name: Euro
-    class: FX
-    currency: USD
-    specs: https://www.cmegroup.com/trading/fx/g10/euro-fx_contract_specifications.html
-    description: EUR and M6E are futures contracts on the Euro (EUR) / USD exchange rate. The multiplier of the large contract (EUR) is EUR 125K, while the smaller one (M6E) is worth a tenth of it at EUR 12.5K. 
-    
-  - code: CME/ED
-    ticker: GE (2500)
-    name: 3-month Eurodollar Interbank Deposit
-    class: Rates
-    currency: USD
-    
-  - code: CME/ES
-    ticker: ES (50), MES (5), SP
-    name: USA S&P 500 Index E-Mini
-    class: Equity
-    currency: USD
-    specs: https://www.cmegroup.com/trading/equity-index/us-index/e-mini-sandp500_contract_specifications.html
-    description: S&P 500 is the reference index for US equity. It covers the 500 highest capitalization stocks, which amount to roughly 80% of US stock market in term of market capitalization. ES is one of the most popular futures contracts, with a contract value of around USD 145K. CME group launched in May 2019 a new "micro" contract with the ticker MES and a tenth of the size of the "mini" contract, hopefully much more manageable for most individual investors.
-    
-  - code: CME/FV
-    ticker: ZF (1K)
-    name: USA 5-year Government Bonds
-    class: Bonds
-    currency: USD
-    
-  - code: CME/GC
-    ticker: MGC (10)
-    name: Gold
-    class: Metals
-    currency: USD
-    
-  - code: CME/HG
-    ticker: QC (12500)
-    name: Copper
-    class: Metals
-    currency: USD
-    
-  - code: CME/JY
-    ticker: MJY (1.25)
-    name: Japanese Yen
-    class: FX
-    currency: USD
-    
-  - code: CME/LC
-    ticker: LE (400)
-    name: Live Cattle
-    class: Agriculture
-    currency: USD
-    
-  - code: CME/LN
-    ticker: HE (400)
-    name: Lean Hog
-    class: Agriculture
-    currency: USD
-    
-  - code: CME/MNF
-    ticker: MNCA (2)
-    name: India Nifty Index
-    class: Equity
-    currency: USD
-    
-  - code: CME/MP
-    ticker: MXP (0.5)
-    name: Mexican Peso
-    class: FX
-    currency: USD
-    
-  - code: CME/NG
-    ticker: QG (2500), NG (10K)
-    name: Henry Hub Natural Gas
-    class: Energy
-    currency: USD
-    
-  - code: CME/RU
-    ticker: RUR ()
-    name: Russian Ruble
-    class: FX
-    currency: USD
-    
-  - code: CME/S
-    ticker: YK (10)
-    name: Soybean
-    class: Agriculture
-    currency: USD
-    
-  - code: CME/SF
-    ticker: MSF (12500)
-    name: Swiss Franc
-    class: FX
-    currency: USD
-    
-  - code: CME/SI
-    ticker: SI (1K)
-    name: Silver
-    class: Metals
-    currency: USD
-    
-  - code: CME/TU
-    ticker: ZT (2K)
-    name: USA 2-year Government Bonds
-    class: Bonds
-    currency: USD
-    
-  - code: CME/TY
-    ticker: ZN (1K)
-    name: USA 10-year Government Bonds
-    class: Bonds
-    currency: USD
-    
-  - code: CME/W
-    ticker: ZR ()
-    name: Wheat
-    class: Agriculture
-    currency: USD
-    
-  - code: CME/YO
-    ticker: SB (112000)
-    name: Sugar n°11
-    class: Agriculture
-    currency: USD
-    
-  - code: EUREX/FBTP
-    ticker: BTP (1K)
-    name: Italy 10-year Government Bonds
-    class: Bonds
-    currency: EUR
-    
-  - code: EUREX/FESX
-    ticker: ESTX50 (10)
-    name: Europe EURO STOXX 50 Index
-    class: Equity
-    currency: EUR
-    specs: https://www.eurexchange.com/exchange-en/products/idx/stx/blc/EURO-STOXX-50-Index-Futures-160088
-    description: EURO STOXX 50 is an equity index of the 50 highest market capitalization in the Euro zone. Contract is worth 10 times index value, which amounts to around USD 40K.
-    
-  - code: EUREX/FGBL
-    ticker: GBL (1K)
-    name: Germany 10-year Government Bonds (Bund)
-    class: Bonds
-    currency: EUR
-    
-  - code: EUREX/FGBM
-    ticker: GBM (1K)
-    name: Germany 5-year Government Bonds (Bobl)
-    class: Bonds
-    currency: EUR
-    
-  - code: EUREX/FGBS
-    ticker: GBS (1K)
-    name: Germany 2-year Government Bonds (Schatz)
-    class: Bonds
-    currency: EUR
-    
-  - code: EUREX/FXXP
-    ticker: DJ600 (50)
-    name: STOXX Europe 600 Index
-    class: Equity
-    currency: EUR
-    specs: https://www.eurexchange.com/exchange-en/products/idx/stx/bmc/STOXX-Europe-600-Index-Futures-253788
-    description: STOXX Europe 600  is an index of the 600 largest market capitalization in Europe. It has a much broader base than EURO STOXX 50, and it should be noted that this index includes for a large part non-EURO stocks (from the UK and from Switzerland). Contract size is 50 times index value, amounting to around USD 20K.
-    
-  - code: HKEX/HSI
-    ticker: MHI (10)
-    name: Hong Kong Hang Seng Index
-    class: Equity
-    currency: HKD
-    
-  - code: ICE/B
-    ticker: Z (1K)
-    name: Brent Crude Oil
-    class: Energy
-    currency: USD
-    
-  - code: ICE/CC
-    ticker: CC (10)
-    name: Cocoa
-    class: Agriculture
-    currency: USD
-    
-  - code: ICE/CT
-    ticker: CT ()
-    name: Cotton
-    class: Agriculture
-    currency: USD
-    
-  - code: ICE/MME
-    ticker: MXEF (50)
-    name: MSCI Emerging Markets Index
-    class: Equity
-    currency: USD
-    hide: true
-    
-  - code: MX/CGB
-    ticker: CGB (1K)
-    name: Canada 10-year Government Bonds
-    class: Bonds
-    currency: CAD
-    
-  - code: MX/SXM
-    ticker: TSE (50)
-    name: Canada S&P/TSX 60 Index
-    class: Equity
-    currency: CAD
-    
-  - code: OSE/NK225M
-    ticker: N225M (100)
-    name: Japan Nikkei 225 Index
-    class: Equity
-    currency: JPY
-    
-  - code: OSE/TOPIXM
-    ticker: MNTPX (1K)
-    name: Japan Topix Index
-    class: Equity
-    currency: JPY
-    
-  - code: SGX/CN
-    ticker: XINA50 (1)
-    name: China FTSE A50 Index
-    class: Equity
-    currency: USD
-    
-  - code: SGX/JB
-    ticker: SGB (10K)
-    name: Japan 10-year Government Bonds
-    class: Bonds
-    currency: JPY
+- code: CME/BP
+  ticker: GBP (62.5K), M6B (6.25K)
+  name: British Pound
+  class: FX
+  currency: USD
+  specs: https://www.cmegroup.com/trading/fx/g10/british-pound_contract_specifications.html    
+  description: GBP and M6B are futures contracts on the British Pound (GBP) / USD exchange rate. The multiplier of the large contract (GBP) is GBP 62.5K, while the smaller one (M6B) is worth a tenth of it at GBP 6.25K.
+  
+- code: CME/BR
+  ticker: BRE (100K)
+  name: Brazilian Real
+  class: FX
+  currency: USD
+  specs: https://www.cmegroup.com/trading/fx/emerging-market/brazilian-real_contract_specifications.html
+  description: BRE is a futures contract for 100K Brazilian Reals in USD. 
+  
+- code: CME/C
+  ticker: ZC (5000), YC (1000)
+  name: Corn
+  class: Agriculture
+  currency: USD
+  specs: https://www.cmegroup.com/trading/agricultural/grain-and-oilseed/corn_contract_specifications.html
+  description: ZC and YC are futures contracts on corn. Futures contracts on corn are among the earliest futures contracts and price data dates back to 1959. The smaller contract YC offers quite a low liquidity compared to ZC, which still has a very manageable size, around USD 18K.
+  
+- code: CME/CD
+  ticker: CAD (100K), MCD (10K)
+  name: Canadian Dollar
+  class: FX
+  currency: USD
+  specs: https://www.cmegroup.com/trading/fx/g10/canadian-dollar_contract_specifications.html
+  description: CAD and MCD are futures contracts on the Canadian Dollar (CAD) / USD exchange rate. The multiplier of the large contract (CAD) is CAD 100K, while the smaller one (MCD) is worth a tenth of it at CAD 10K.
+  
+- code: CME/CL
+  ticker: QM (500), CL (1K)
+  name: West Texas Intermediate (WTI) Crude Oil
+  class: Energy
+  currency: USD
+  specs: https://www.cmegroup.com/trading/energy/crude-oil/light-sweet-crude_contractSpecs_futures.html
+  description: CL and QM are futures contracts on respectively 1000 and 500 barrels of crude oil to be delivered at Cushing, Oklahoma. 
+  
+- code: CME/EC
+  ticker: EUR (125K), M6E (12.5K)
+  name: Euro
+  class: FX
+  currency: USD
+  specs: https://www.cmegroup.com/trading/fx/g10/euro-fx_contract_specifications.html
+  description: EUR and M6E are futures contracts on the Euro (EUR) / USD exchange rate. The multiplier of the large contract (EUR) is EUR 125K, while the smaller one (M6E) is worth a tenth of it at EUR 12.5K. 
+  
+- code: CME/ED
+  ticker: GE (2500)
+  name: 3-month Eurodollar Interbank Deposit
+  class: Rates
+  currency: USD
+  
+- code: CME/ES
+  ticker: ES (50), MES (5), SP
+  name: USA S&P 500 Index E-Mini
+  class: Equity
+  currency: USD
+  specs: https://www.cmegroup.com/trading/equity-index/us-index/e-mini-sandp500_contract_specifications.html
+  description: S&P 500 is the reference index for US equity. It covers the 500 highest capitalization stocks, which amount to roughly 80% of US stock market in term of market capitalization. ES is one of the most popular futures contracts, with a contract value of around USD 145K. CME group launched in May 2019 a new "micro" contract with the ticker MES and a tenth of the size of the "mini" contract, hopefully much more manageable for most individual investors.
+  
+- code: CME/FV
+  ticker: ZF (1K)
+  name: USA 5-year Government Bonds
+  class: Bonds
+  currency: USD
+  
+- code: CME/GC
+  ticker: MGC (10)
+  name: Gold
+  class: Metals
+  currency: USD
+  
+- code: CME/HG
+  ticker: QC (12500)
+  name: Copper
+  class: Metals
+  currency: USD
+  
+- code: CME/JY
+  ticker: MJY (1.25)
+  name: Japanese Yen
+  class: FX
+  currency: USD
+  
+- code: CME/LC
+  ticker: LE (400)
+  name: Live Cattle
+  class: Agriculture
+  currency: USD
+  
+- code: CME/LN
+  ticker: HE (400)
+  name: Lean Hog
+  class: Agriculture
+  currency: USD
+  
+- code: CME/MNF
+  ticker: MNCA (2)
+  name: India Nifty Index
+  class: Equity
+  currency: USD
+  
+- code: CME/MP
+  ticker: MXP (0.5)
+  name: Mexican Peso
+  class: FX
+  currency: USD
+  
+- code: CME/NG
+  ticker: QG (2500), NG (10K)
+  name: Henry Hub Natural Gas
+  class: Energy
+  currency: USD
+  
+- code: CME/RU
+  ticker: RUR ()
+  name: Russian Ruble
+  class: FX
+  currency: USD
+  
+- code: CME/S
+  ticker: YK (10)
+  name: Soybean
+  class: Agriculture
+  currency: USD
+  
+- code: CME/SF
+  ticker: MSF (12500)
+  name: Swiss Franc
+  class: FX
+  currency: USD
+  
+- code: CME/SI
+  ticker: SI (1K)
+  name: Silver
+  class: Metals
+  currency: USD
+  
+- code: CME/TU
+  ticker: ZT (2K)
+  name: USA 2-year Government Bonds
+  class: Bonds
+  currency: USD
+  
+- code: CME/TY
+  ticker: ZN (1K)
+  name: USA 10-year Government Bonds
+  class: Bonds
+  currency: USD
+  
+- code: CME/W
+  ticker: ZR ()
+  name: Wheat
+  class: Agriculture
+  currency: USD
+  
+- code: CME/YO
+  ticker: SB (112000)
+  name: Sugar n°11
+  class: Agriculture
+  currency: USD
+  
+- code: EUREX/FBTP
+  ticker: BTP (1K)
+  name: Italy 10-year Government Bonds
+  class: Bonds
+  currency: EUR
+  
+- code: EUREX/FESX
+  ticker: ESTX50 (10)
+  name: Europe EURO STOXX 50 Index
+  class: Equity
+  currency: EUR
+  specs: https://www.eurexchange.com/exchange-en/products/idx/stx/blc/EURO-STOXX-50-Index-Futures-160088
+  description: EURO STOXX 50 is an equity index of the 50 highest market capitalization in the Euro zone. Contract is worth 10 times index value, which amounts to around USD 40K.
+  
+- code: EUREX/FGBL
+  ticker: GBL (1K)
+  name: Germany 10-year Government Bonds (Bund)
+  class: Bonds
+  currency: EUR
+  
+- code: EUREX/FGBM
+  ticker: GBM (1K)
+  name: Germany 5-year Government Bonds (Bobl)
+  class: Bonds
+  currency: EUR
+  
+- code: EUREX/FGBS
+  ticker: GBS (1K)
+  name: Germany 2-year Government Bonds (Schatz)
+  class: Bonds
+  currency: EUR
+  
+- code: EUREX/FXXP
+  ticker: DJ600 (50)
+  name: STOXX Europe 600 Index
+  class: Equity
+  currency: EUR
+  specs: https://www.eurexchange.com/exchange-en/products/idx/stx/bmc/STOXX-Europe-600-Index-Futures-253788
+  description: STOXX Europe 600  is an index of the 600 largest market capitalization in Europe. It has a much broader base than EURO STOXX 50, and it should be noted that this index includes for a large part non-EURO stocks (from the UK and from Switzerland). Contract size is 50 times index value, amounting to around USD 20K.
+  
+- code: HKEX/HSI
+  ticker: MHI (10)
+  name: Hong Kong Hang Seng Index
+  class: Equity
+  currency: HKD
+  
+- code: ICE/B
+  ticker: Z (1K)
+  name: Brent Crude Oil
+  class: Energy
+  currency: USD
+  
+- code: ICE/CC
+  ticker: CC (10)
+  name: Cocoa
+  class: Agriculture
+  currency: USD
+  
+- code: ICE/CT
+  ticker: CT ()
+  name: Cotton
+  class: Agriculture
+  currency: USD
+  
+- code: ICE/MME
+  ticker: MXEF (50)
+  name: MSCI Emerging Markets Index
+  class: Equity
+  currency: USD
+  hide: true
+  
+- code: MX/CGB
+  ticker: CGB (1K)
+  name: Canada 10-year Government Bonds
+  class: Bonds
+  currency: CAD
+  
+- code: MX/SXM
+  ticker: TSE (50)
+  name: Canada S&P/TSX 60 Index
+  class: Equity
+  currency: CAD
+  
+- code: OSE/NK225M
+  ticker: N225M (100)
+  name: Japan Nikkei 225 Index
+  class: Equity
+  currency: JPY
+  
+- code: OSE/TOPIXM
+  ticker: MNTPX (1K)
+  name: Japan Topix Index
+  class: Equity
+  currency: JPY
+  
+- code: SGX/CN
+  ticker: XINA50 (1)
+  name: China FTSE A50 Index
+  class: Equity
+  currency: USD
+  
+- code: SGX/JB
+  ticker: SGB (10K)
+  name: Japan 10-year Government Bonds
+  class: Bonds
+  currency: JPY
