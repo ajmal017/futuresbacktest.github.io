@@ -1,4 +1,4 @@
-  - code: ASX/AP
+- code: ASX/AP
     ticker: SPI (10), MSPI (5)
     name:  Ausralia S&P/ASX 200 Index
     class: Equity

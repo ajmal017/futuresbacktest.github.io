@@ -89,4 +89,3 @@ $$carry=\frac{d}{50\%}-r=2d-r$$
 which gives:
 
 $$carry=2.\left(\frac{p_{t_1}}{p_{t_2}}\right)^{\frac{1}{t_2-t_1}}-2+r$$
-

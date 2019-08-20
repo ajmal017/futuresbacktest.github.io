@@ -33,13 +33,13 @@ The granularity of possible positions is to be taken into account in our backtes
 
 [^2]: For instance if the “real” position we would like to take is 1.45 contracts and later 0.55 contracts, we will round the position to 1 contract in both periods, thus resulting in a very different story than if we could have taken our fine-tuned positions.
 
-We don't know a perfect way to account for this effect in our backtest, because accounts size vary over time and and contracts size do too (because of varying prices). A sensible way to test the effect of the not-so-fine granularity of possible positions is to consider contracts sizes as fixed percentages of account size (for instance considering today’s account size and contracts sizes). It can give you a hint of the differences in positions and P&L that can be expected; however it is not panacea as it is not a realistic simulation.
+We don't know a perfect way to account for this effect in our backtest, because accounts sizes vary over time and and contracts size do too (because of varying prices). A sensible way to test the effect of the not-so-fine granularity of possible positions is to consider contracts sizes as fixed percentages of account size (for instance considering today’s account size and contracts sizes). It can give you a hint of the differences in positions and P&L that can be expected; however it is not a panacea as it is not a realistic simulation.
 
 ## Futures contracts P&L is “Excess return”
 
 A futures contract is a firm commitment to buy or deliver a specified underlying asset or commodity at a given date and at a given price. At delivery, the two parties involved can in theory just exchange the cash difference between the agreed price and the spot (settlement) price and buy/sell the underlying on the spot market if they need to. Futures contracts on financial assets (equity index, government bonds, etc.) are most often “cash settled” this way.
 
-As a consequence, positions on futures contracts do not require as much cash as the position size, but only a fraction of it (the margin) which is secured by the clearing house to reduce counterparty risk (as little as a fraction of a % for positions on low volatility products such as short term fixed income products). Thus, futures contracts position are not funded: logically, the holder of a long futures position is not remunerated at the risk free rate on the amount of the position because he actually put no cash on the table except the required margin.
+As a consequence, positions on futures contracts do not require as much cash as the position size, but only a fraction of it (the margin) which is secured by the clearing house to reduce counterparty risk (as little as a fraction of a % for positions on low volatility products such as short term fixed income products). Thus, futures contracts positions are not funded: logically, the holder of a long futures position is not remunerated at the risk free rate on the amount of the position because he actually put no cash on the table except the required margin.
 
 There, a substantial difference arises in backtests between equities/bonds and futures: the equity curve resulting from holding a given security (let’s say a S&P 500 ETF) is total return, whereas the equity curve resulting from holding a long position in a futures contract (on S&P 500) is “excess return”. To make these two comparable, one need to add the risk free rate to excess return to get a sense of the total return. Indeed, the cash amount which is not invested in the futures contract position can be invested in short term treasury bills and yield the risk free rate.
 
@@ -60,4 +60,3 @@ The takeaway of this example is that futures contracts are inherently edged agai
 ## Conclusion
 
 We have covered some of the specific features of futures contracts, which impact the way we compute our backtests. To dive deeper into futures contracts backtesting, give a try to our online backtesting platform to see the effect of roll adjustment! Our [docs](/docs/) is here to get you started.
-

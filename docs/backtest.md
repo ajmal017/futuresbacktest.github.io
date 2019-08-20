@@ -77,4 +77,4 @@ Display statistics on the historical positions for each contract.
 {: .makepill}
 ### P&L Contributions
 
-Provides an attribution of performance to each component of the portfolio. Contribution to the performance can be split up by asset class, by asset and by strategy, or a combination of the three. For the sake of lisibility, you can filter out some contributions from the analysis. Contributions to the performance of the portfolio are computed as the P&L of each individual component. The sum of all contributions is then equal to the portfolio value.  
+Provides an attribution of performance to each component of the portfolio. Contribution to the performance can be split up by asset class, by asset and by strategy, or a combination of the three. For the sake of lisibility, you can filter out some contributions from the analysis. Contributions to the performance of the portfolio are computed as the P&L of each individual component. The sum of all contributions is then equal to the portfolio value.
