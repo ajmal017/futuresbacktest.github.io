@@ -13,8 +13,6 @@ image-caption: |
 
 You may be familiar with backtesting individual stocks or ETF portfolios. Futures contracts are different in some ways. We’ll discuss some of these differences and what it means for our backtests.
 
-<!--more-->
-
 ## From individual contracts to continuous contracts
 
 Futures contracts are usually traded for a short period of time, especially futures on financial products. As the delivery date is approaching, in order to keep a long position one would need to “roll” his or her position to the next contract (quite often the contract expiring three months later). So if we want to see time series longer than a few months, we need to stitch together data from many individual contracts.

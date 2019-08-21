@@ -29,7 +29,6 @@ feed:
 # Build settings
 markdown: kramdown
 theme: minima
-excerpt_separator: <!--more-->
 plugins:
   - jekyll-feed
   - jekyll-sitemap

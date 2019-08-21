@@ -14,13 +14,13 @@ FuturesBacktest is a web-based platform to backtest futures contracts portfolios
 <div>
 ## [{{ post.title }}]({{ post.url }})
 {% if post.last_modified_at %}
-{{ post.date | date: '%B %-d, %Y' }} (updated on {{post.last_modified_at | date: '%B %-d, %Y' }}), by {{ post.author }}
+{{post.date | date: '%B %-d, %Y' }} (updated on {{post.last_modified_at | date: '%B %-d, %Y' }}), by {{post.author}}
 {% else %}
-{{ post.date | date: '%B %-d, %Y' }}, by {{ post.author }}
+{{post.date | date: '%B %-d, %Y' }}, by {{post.author}}
 {% endif %}
 
 {: .post-excerpt}
-{{ post.excerpt }}
+{{post.excerpt}}
 
 [READ MORE &raquo;]({{ post.url }})
 </div>

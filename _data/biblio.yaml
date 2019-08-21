@@ -41,3 +41,13 @@
   key: aqr2016
   tags: 
     - "Carry"
+
+- authors: Sébastien Maillard, Thierry Roncalli and Jérôme Teiletche
+  title: On the properties of equally-weighted risk contributions portfolios
+  publication:
+  url: http://www.thierry-roncalli.com/download/erc.pdf
+  key: maillard2009
+  tags:
+    - “Allocation”
+    - “Risk Parity”
+    - “ERC”

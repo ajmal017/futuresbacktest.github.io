@@ -1,6 +1,6 @@
 - code: ASX/AP
   ticker: SPI (10), MSPI (5)
-  name:  Ausralia S&P/ASX 200 Index
+  name: Ausralia S&P/ASX 200 Index
   class: Equity
   country: Australia
   currency: AUD
@@ -28,7 +28,7 @@
   name: British Pound
   class: FX
   currency: USD
-  specs: https://www.cmegroup.com/trading/fx/g10/british-pound_contract_specifications.html    
+  specs: https://www.cmegroup.com/trading/fx/g10/british-pound_contract_specifications.html  
   description: GBP and M6B are futures contracts on the British Pound (GBP) / USD exchange rate. The multiplier of the large contract (GBP) is GBP 62.5K, while the smaller one (M6B) is worth a tenth of it at GBP 6.25K.
   
 - code: CME/BR
@@ -225,7 +225,7 @@
   class: Equity
   currency: EUR
   specs: https://www.eurexchange.com/exchange-en/products/idx/stx/bmc/STOXX-Europe-600-Index-Futures-253788
-  description: STOXX Europe 600  is an index of the 600 largest market capitalization in Europe. It has a much broader base than EURO STOXX 50, and it should be noted that this index includes for a large part non-EURO stocks (from the UK and from Switzerland). Contract size is 50 times index value, amounting to around USD 20K.
+  description: STOXX Europe 600 is an index of the 600 largest market capitalization in Europe. It has a much broader base than EURO STOXX 50, and it should be noted that this index includes for a large part non-EURO stocks (from the UK and from Switzerland). Contract size is 50 times index value, amounting to around USD 20K.
   
 - code: HKEX/HSI
   ticker: MHI (10)

@@ -12,8 +12,6 @@ image-caption: |
 
 Welcome to our website! We hope that you'll like it. In short, FuturesBacktest is a platform where you can backtest portfolios of futures contracts, learn and test your ideas.
 
-<!--more-->
-
 While other platforms provide a raw backtesting engine and require you to write computer code, we chose a simpler approach where you can test a variety of strategies and fine tune your backtest directly in your browser, through a simple user interface.
 
 You may find our platform somehow opinionated, even if we constantly try to add more simulation options. We focus on the so called [trend, carry and value factors](/docs/strategies/) (that we prefer to call strategies), applied to [all futures contracts](/docs/contracts/) across assets classes. We believe that these factors can bring value and interesting diversification potential to every investor.
