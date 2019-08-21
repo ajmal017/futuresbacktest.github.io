@@ -11,14 +11,13 @@
                     {% else %}
                     <span class="post-details">{{page.date | date: '%B %-d, %Y' }}, by {{page.author}}</span>
                     {% endif %}
-                    {{ page.excerpt }}
                     {% if page.image %}
                     <figure>
                         <img src="{{page.image}}" class="img-fluid" alt="{{page.image-alt}}" />
                         <figcaption>{{page.image-caption}}</figcaption>
                      </figure>
                     {% endif %}
-                    {{ content | remove: page.excerpt }}
+                    {{ content }}
                   </div>
                   <div class="PageNavigation">
   {% if page.previous.url %}
