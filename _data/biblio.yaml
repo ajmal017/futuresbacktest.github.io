@@ -48,15 +48,15 @@
   url: http://www.thierry-roncalli.com/download/erc.pdf
   key: maillard2009
   tags:
-    - “Allocation”
-    - “Risk Parity”
-    - “ERC”
+    - "Allocation"
+    - "Risk Parity"
+    - "ERC"
 
 - authors: Raphael Benichou, Yves Lempérière, Emmanuel Sérié, Julien Kockelkoren, Philip Seager, Jean-Philippe Bouchaud and Marc Potters
-  title: Agnostic risk parity: taming known and unknown unknowns
+  title: "Agnostic risk parity: taming known and unknown unknowns"
   publication: Journal of Investment Strategies, Volume 6, Number 3 (June 2017)
   url: https://arxiv.org/abs/1610.08818
   key: benichou2017
   tags:
-    - “Allocation”
-    - “Risk Parity”
+    - "Allocation"
+    - "Risk Parity"
