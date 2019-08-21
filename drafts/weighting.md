@@ -37,7 +37,7 @@ In the "inverse volatility" approach, assets weights are computed as the inverse
 
 This basic approach does not account for correlations. As an option, you can also choose to equalize the volatility of each asset class (considering the correlations between assets in the same asset class and the sign of the aggregated indicators).
 
-> ## Volatility and correlations
+> ### Volatility and correlations
 >
 > For all the weighting methods except static weights, we need to compute estimates of volatility and correlations at every rebalancing date. To do so:
 > * we compute volatility as the standard deviation of the daily log returns multiplied by the square root of 252 (average number of trading days in a year), using a rolling exponential window with a span of your choice (default to 150 trading days);
@@ -48,7 +48,7 @@ This basic approach does not account for correlations. As an option, you can als
 > We advise that you keep long enough windows for volatility and correlations in order to improve stability of the weights computation.
 >
 > More sophisticated models exist to estimate volatility ([GARCH](), to name one), but for now we decided to keep it simple and use recent realized volatility as a proxy. 
-
+>
 > Correlations estimation, or the equivalent covariance matrix estimation, is also a heavily researched field. As most portfolio optimization approaches rely on the inverse or the eigenvalues of the covariance matrix, the sample correlation estimator is known to behave poorly in this context when the number of variables is not small relative to the sample size. Several regularization techniques (such as "shrinkage") have been introduced to tackle this issue; we may include some of them at a later point in time but for now we stick to the standard sample correlation estimator (Pearson correlation coefficient) and advise that you keep a long enough rolling window.
 
 ## Mean-Variance
@@ -71,7 +71,7 @@ If no assumption is made on expected returns (i.e. if you choose a 100% long str
 
 Risk Budgeting is a generalization of the Equal Risk Contribution portfolio described in the 2009 paper “On the properties of equally-weighted risk contributions portfolios”[^1]. The equal risk contribution portfolio (ERC) is a portfolio where the contribution of each asset to the total variance of the portfolio is equal.
 
-[^1]: {% include citation.html key=maillard2009 %}
+[^1]: {% include citation.html key="maillard2009" %}
 
 The contribution of an asset to the total variance of a portfolio depends on its own variance but also on its covariance with the other assets. The risk contribution $$RC_i$$ of an asset $$i$$ is defined mathematically as:
 
@@ -83,14 +83,22 @@ It is to be noted that the sum of the risk contributions of all assets is equal 
 
 The risk budgeting approach, described a bit later[^3], is a generalization of the ERC portfolio, where risk contributions are not equal but are set to specific “risk budgets” decided upon by the portfolio manager. It is the approach we propose on FuturesBacktest, using the [aggregated indicators](/docs/strategies/) of future returns as risk budget values.
 
-[^3]: {% include citation.html key=bruder2012 %}
+[^3]: {% include citation.html key="bruder2012" %}
 
 To compute the weights of the risk budgeting portfolio, we adopted a simpler approach than the two previous papers. Our approach is derived from the paper “Efficient algorithms for computing risk parity portfolio weights”[^4]. It is a simple unconstrained minimization using Newton’s methods. As pointed out in this paper, relieving the constraints on weights lead to a much simpler optimization problem than the ones described in the original paper, and usually yields the same weights. Our method is even simpler as we remove the constraint on the sum of the portfolio weights equal to 1. 
 
-[^4]: {% include citation.html key=chaves2012 %}
+[^4]: {% include citation.html key="chaves2012" %}
 
 ## Agnostic Risk Parity
 
-Agnostic risk parity is a newer and less known approach to portfolio construction. It is described in a 2018 paper entitled “Agnostic risk parity: taming known and unknown unknowns”[^2].
+Agnostic risk parity is a newer and less known approach to portfolio weighting. It is described in a 2016 paper entitled “Agnostic risk parity: taming known and unknown unknowns”[^2]. This method addresses the main drawback of Markovitz's mean-variance optimization, which is a high concentration of bets on assets returns, assuming that estimated correlations will hold.
 
-[^2]: {% include citation.html key=benichou2017 %}
+[^2]: {% include citation.html key="benichou2017" %}
+
+In this method, the authors build a portfolio of synthetic assets, uncorrelated to each other, and decide on positions based on these synthetic assets (which are linear combinations of the original assets). They apply this approach to risk parity and trend following strategies.
+
+The calculation of the Agnostic Risk Parity portfolio rely on the eigenvectors and eigenvalues of the covariance matrix of the assets returns. The weights $$w$$ are calculated as follows:
+
+$$w = \alpha*\Sigma^{-1/2}.\mu$$
+
+where $$\alpha$$ is a scale coefficient, $$\Sigma^{-1/2}$$ is the inverse of the square root of the covariance matrix (see the paper for more details) and $$\mu$$ is the vector of expected returns (we use our aggregated indicator of expected returns).
