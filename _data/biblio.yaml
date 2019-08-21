@@ -48,9 +48,9 @@
   url: http://www.thierry-roncalli.com/download/erc.pdf
   key: maillard2009
   tags:
-    - "Allocation"
-    - "Risk Parity"
-    - "ERC"
+    - Allocation
+    - Risk Parity
+    - ERC
 
 - authors: Raphael Benichou, Yves Lempérière, Emmanuel Sérié, Julien Kockelkoren, Philip Seager, Jean-Philippe Bouchaud and Marc Potters
   title: "Agnostic risk parity: taming known and unknown unknowns"
@@ -58,5 +58,25 @@
   url: https://arxiv.org/abs/1610.08818
   key: benichou2017
   tags:
-    - "Allocation"
-    - "Risk Parity"
+    - Allocation
+    - Risk Parity
+
+- authors: Denis B. Chaves, Jason C. Hsu, Feifei Li and Omid Shakernia
+  title: Efficient algorithms for computing risk parity portfolio weights
+  publication: "Journal of Investing, vol. 21, no. 3, Fall 2012, pp. 150-163"
+  url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2117303
+  key: chaves2012
+  tags:
+    - Allocation
+    - Risk Parity
+    - ERC
+
+- authors: Benjamin Bruder and Thierry Roncalli
+  title: Managing Risk Exposures using the Risk Budgeting Approach
+  publication:
+  url: http://www.thierry-roncalli.com/download/risk-budgeting.pdf
+  key: bruder2012
+  tags:
+    - Allocation
+    - Risk Parity
+    - ERC

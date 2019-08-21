@@ -69,10 +69,28 @@ If no assumption is made on expected returns (i.e. if you choose a 100% long str
 
 ## Risk Budgeting or Equal Risk Contribution
 
-Risk Budgeting is a generalization of the Equal Risk Contribution portfolio introduced by … in 2008. In this framework, the aim is to set the contribution of each asset to the total variance of the portfolio equal to some "risk budget".
+Risk Budgeting is a generalization of the Equal Risk Contribution portfolio described in the 2009 paper “On the properties of equally-weighted risk contributions portfolios”[^1]. The equal risk contribution portfolio (ERC) is a portfolio where the contribution of each asset to the total variance of the portfolio is equal.
+
+[^1]: {% include citation.html key=maillard2009 %}
+
+The contribution of an asset to the total variance of a portfolio depends on its own variance but also on its covariance with the other assets. The risk contribution $$RC_i$$ of an asset $$i$$ is defined mathematically as:
+
+$$RC_i =w_i*\sum_j (w_j * \sigma_{i, j})$$
+
+Where $$w_i$$ denotes the weight of asset $$i$$ and $$\sigma_{i,j}$$ is the covariance of assets $$i$$ and $$j$$, or the standard deviation of asset $$i$$ if $$i=j$$.
+
+It is to be noted that the sum of the risk contributions of all assets is equal to the variance of the portfolio. In order to find assets weights that equalize risk contributions, the authors propose two different optimization problems.
+
+The risk budgeting approach, described a bit later[^3], is a generalization of the ERC portfolio, where risk contributions are not equal but are set to specific “risk budgets” decided upon by the portfolio manager. It is the approach we propose on FuturesBacktest, using the [aggregated indicators](/docs/strategies/) of future returns as risk budget values.
+
+[^3]: {% include citation.html key=bruder2012 %}
+
+To compute the weights of the risk budgeting portfolio, we adopted a simpler approach than the two previous papers. Our approach is derived from the paper “Efficient algorithms for computing risk parity portfolio weights”[^4]. It is a simple unconstrained minimization using Newton’s methods. As pointed out in this paper, relieving the constraints on weights lead to a much simpler optimization problem than the ones described in the original paper, and usually yields the same weights. Our method is even simpler as we remove the constraint on the sum of the portfolio weights equal to 1. 
+
+[^4]: {% include citation.html key=chaves2012 %}
 
 ## Agnostic Risk Parity
 
-Agnostic risk parity is a newer and less known approach to portfolio construction. It is described in a 2018 paper entitled “Agnostic risk parity: taming known and unknown unknowns”[^1]
+Agnostic risk parity is a newer and less known approach to portfolio construction. It is described in a 2018 paper entitled “Agnostic risk parity: taming known and unknown unknowns”[^2].
 
-[^1]: { include citation.html key=”benichou2017” }
+[^2]: {% include citation.html key=benichou2017 %}
