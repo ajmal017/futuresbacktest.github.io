@@ -12,6 +12,7 @@ image-caption: |
 ---
 
 You may be familiar with backtesting individual stocks or ETF portfolios. Futures contracts are different in some ways. We’ll discuss some of these differences and what it means for our backtests.
+<!--more-->
 
 ## From individual contracts to continuous contracts
 

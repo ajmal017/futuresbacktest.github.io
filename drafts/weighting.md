@@ -57,17 +57,22 @@ The mean-variance weighting approach is inspired by Markowitz optimal portfolio 
 
 The idea is to find the assets weights that minimize expected volatility for a given level of expected returns, using some measures of expected returns, assets volatility and correlations. Here, we will use our aggregated indicator value as a measure of expected returns, and recent realized volatilities (based on daily returns) and correlations (based on weekly returns) as a measure of expected ones, to keep it simple.
 
-The mean-variance optimization can be solved numerically; the formula for the weights is the following:
+The mean-variance optimization can be solved numerically; the formula for the vector $$w$$ of the weights of each asset is the following:
 
-Alpha * Sigma-1 * mu 
+$$ w=\alpha * \Sigma^{-1}.\mu $$
 
-Though theoretically appealing, the mean-variance portfolio construction is known to generate highly concentrated portfolios and seems to be not widely used by practitioners without some tweaks (for instance by forcing a certain amount of diversification). It is however still a reference which is worth including in your options.
+Where $$\Sigma$$ is the covariance matrix, $$\mu$$ is a vector of expected returns for each asset and $$\alpha$$ is an arbitrary coefficient (which we use to adjust target volatility).
 
-If no assumption is made on expected returns (if you choose a 100% long strategy for each asset), mean-variance optimization is equivalent to minimum-variance optimization.
+Though theoretically appealing, the mean-variance portfolio construction is known to generate highly concentrated portfolios and seems to be not widely used by practitioners without some tweaks (for instance by forcing a certain amount of diversification). It is however still a reference which is worth including in our options.
 
-# Risk Budgeting or Equal Risk Contribution
+If no assumption is made on expected returns (i.e. if you choose a 100% long strategy for each asset), mean-variance optimization is equivalent to minimum-variance optimization.
+
+## Risk Budgeting or Equal Risk Contribution
 
 Risk Budgeting is a generalization of the Equal Risk Contribution portfolio introduced by … in 2008. In this framework, the aim is to set the contribution of each asset to the total variance of the portfolio equal to some "risk budget".
 
-a popular risk-parity approach;
-* agnostic risk parity, a newer approach to risk parity.
+## Agnostic Risk Parity
+
+Agnostic risk parity is a newer and less known approach to portfolio construction. It is described in a 2018 paper entitled “Agnostic risk parity: taming known and unknown unknowns”[^1]
+
+[^1]: { include citation.html key=”benichou2017” }

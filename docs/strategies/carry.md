@@ -6,11 +6,11 @@ layout: default
 
 # Carry
 
-In a general sense, the carry of an asset is the cost (or the gain) that one incur when holding a position, if market conditions remain unchanged. It can be viewed as an implicit interest rate paid or received when holding the position, everything else being equal.
+In a general sense, the carry of an asset is the cost (or gain) that one incur when holding a position, if market conditions remain unchanged. It can be viewed as an implicit interest rate paid or received when holding the position, everything else being equal.
 
 A *carry* strategy will seek long exposure to the assets which yield the highest interest rate (in the sense previously described) and short exposure to the assets which yields the lowest negative interest rates.
 
-A *carry* strategy can be applied to multiple assets classes, requiring however different definitions of carry. It can be defined mostly in two ways:
+A *carry* strategy can be applied to multiple assets classes, requiring however different definitions of carry. It can be defined in two ways:
 - directly, using data related to the underlying asset and applying a pricing model to derive the theoretical carry of the position;
 - indirectly, using the term structure of futures contracts.
 
@@ -22,15 +22,15 @@ To compute carry indicators for currencies we use the indirect method: we use da
 
 ## Commodities
 
-We use a similar definition for carry in commodity futures: we compute the carry indicator with the indirect method, using settlement prices. As many commodity future contracts features seasonal patterns, we derive the carry from contracts taken 12 months apart. When several 12-month pairs of contracts are available we take the median. However we limit ourselves to the first 18 months of the term structure.
+We use a similar definition for carry in commodity futures: we compute the carry indicator with the indirect method, using settlement prices. As many commodity futures contracts features seasonal patterns, we derive the carry from contracts taken 12 months apart. When several 12-month pairs of contracts are available we take the median. However we limit ourselves to the first 18 months of the term structure.
 
-Applied to commodity futures, carry is related to the sum of the cost of storage and the cost of borrowing (which can be considered as the actual cost of carry), but it also reflects hedging pressure, when market participant are wiling to pay more to hedge long or short positions. Typically, commodities producers would take short positions to hedge their exposure to the spot price. Keynes argued that commodities producers tend to be dominant over commodity buyers in the futures markets, thus putting a hedging pressure on the sell side. This situation, where futures prices are lower than expected spot price at delivery, is called "normal backwardation". On the contrary, the situation where futures prices are higher than expected spot price at delivery is called "contango".
+Applied to commodity futures, carry is related to the sum of the cost of storage and the cost of borrowing (which can be considered as the actual cost of carry), but it also reflects hedging pressure, when market participants are willing to pay more to hedge long or short positions. Typically, commodities producers would take short positions to hedge their exposure to the spot price. Keynes argued that commodities producers tend to be dominant over commodity buyers in the futures markets, thus putting a hedging pressure on the sell side. This situation, where futures prices are lower than expected spot price at delivery, is called "normal backwardation". On the contrary, the situation where futures prices are higher than expected spot price at delivery is called "contango".
 
 ## Bonds
 
 Bonds carry cannot be computed precisely using the term structure of futures contracts as the underlyings of each contract can feature different characteristics. This is due to the fact that futures contracts on bonds are generally bound to the bond which is the "Cheapest To Deliver" among a basket of eligible bonds, so underlying bonds can have different coupons and residual maturities for different contracts.
 
-As a consequence, we fall back to the direct method, using yield curves for each country. Consitently with the general definition, we calculate bonds futures carry as the cost or the gain that would be incurred if the yield curve stayed exactly the same. Carry is, in theory, the cost of hedging *physically* a short position on a futures contract. For a future contract on government debt, it has three terms: 
+As a consequence, we fall back to the direct method, using yield curves for each country. Consistently with the general definition, we calculate bonds futures carry as the cost or the gain that would be incurred if the yield curve stayed exactly the same. Carry is, in theory, the cost of hedging *physically* a short position on a futures contract. For a future contract on government debt, it has three terms: 
 
 * the cost of borrowing (to borrow the capital to buy the actual security for future delivery), 
 * the coupon paid (which is paid to the current owner of the bond and not to the holder of the futures contract) 
@@ -76,7 +76,7 @@ For most world equity indexes, dividends feature strong seasonal patterns. To ov
 {: .collapsible}
 #### Detailed calculation
 
-First, we calculate implied diviend yield $$d$$ using the settlement prices of front and deferred contracts and the risk free rate as a proxy of the financing cost:
+First, we calculate implied dividend yield $$d$$ using the settlement prices of front and deferred contracts and the risk free rate as a proxy of the financing cost:
 
 $$d=\left(\frac{p_{t_1}}{p_{t_2}}\right)^{\frac{1}{t_2-t_1}}-1+r$$
 

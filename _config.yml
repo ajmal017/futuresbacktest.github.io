@@ -19,7 +19,7 @@ description: >
   FuturesBacktest is a web-based platform to backtest and visualize futures contracts portfolios. 
   Without a single line of code, you can combine assets classes, contracts and strategies through a simple graphical interface. 
   Different flavours of trend, carry and value factors for 50+ futures contracts are available out of the box.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: ""
 url: "https://www.futuresbacktest.com"
 permalink: /blog/:categories/:year/:month/:day/:title:output_ext
 lang: en_US
@@ -29,6 +29,7 @@ feed:
 # Build settings
 markdown: kramdown
 theme: minima
+excerpt_separator: <!--more-->
 plugins:
   - jekyll-feed
   - jekyll-sitemap
