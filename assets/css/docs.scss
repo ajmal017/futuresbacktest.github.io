@@ -19,7 +19,10 @@ h3 {
 }
 
 p {
-  line-height: 1.6em;
+  line-height: 1.7em;
+}
+ol, ul {
+  line-height: 1.7em;
 }
 
 @media screen and (min-width: 992px) {
@@ -99,4 +102,17 @@ ul.nav.nav-pills {
 
 .gist-data {
   max-height: 12em;
+}
+
+.footnotes {
+  margin-top: 5em;
+}
+
+.footnotes::before {
+    content: "";
+    display: block;
+    border-top: 1px solid #2c3e50;
+    height: 1em;
+    margin: 0 auto 1em auto;
+    width: 20%;
 }

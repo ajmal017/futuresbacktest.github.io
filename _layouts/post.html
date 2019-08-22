@@ -4,6 +4,14 @@
             <div class="row">
                 <div class="col-md-2"></div>
                 <div class="col-md-8">
+                    <div class="PageNavigation">
+                        {% if page.previous.url %}
+                          <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+                        {% endif %}
+                        {% if page.next.url %}
+                          <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+                        {% endif %}
+                      </div>                      
                   <div id="blog-content">
                     <h1>{{page.title}}</h1>
                     {% if page.last_modified_at %}
@@ -11,13 +19,16 @@
                     {% else %}
                     <span class="post-details">{{page.date | date: '%B %-d, %Y' }}, by {{page.author}}</span>
                     {% endif %}
+                    {{ page.excerpt }}
                     {% if page.image %}
                     <figure>
                         <img src="{{page.image}}" class="img-fluid" alt="{{page.image-alt}}" />
                         <figcaption>{{page.image-caption}}</figcaption>
                      </figure>
                     {% endif %}
-                    {{ content }}
+                    {% assign content_array = page.content | split: site.excerpt_separator %}
+                    {% assign content_remainder = content_array | last %}
+                    {{ content_remainder }}
                   </div>
                   <div class="PageNavigation">
   {% if page.previous.url %}

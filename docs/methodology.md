@@ -1,7 +1,6 @@
 ---
 title: Methodology
-permalink: /drafts/methodology/
-sitemap: false
+permalink: /docs/methodology/
 layout: default
 ---
 

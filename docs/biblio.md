@@ -6,10 +6,10 @@ layout: default
 
 # Bibliography
 
-We include here a list of relevant article on trend, carry and value factors.
+We include here a list of relevant article on trend, carry and value strategies as well as assets allocation or portfolio construction methods.
 
-* {% include citation.html key="lamperiere2014" %}
-* {% include citation.html key="bhansali2015" %}
-* {% include citation.html key="morganstanley2016" %}
-* {% include citation.html key="gnedenko2016" %}
-* {% include citation.html key="aqr2016" %}
+{% for entry in site.data.biblio %}
+
+* {% include citation.html key=entry.key %}
+
+{% endfor %}

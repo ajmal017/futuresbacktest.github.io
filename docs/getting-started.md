@@ -16,7 +16,7 @@ To run your first backtest, go to the [Backtest](/backtest) page. Here, a sample
 
 When our backtest is done, the results appear in the "Overview" tab, along with some performance metrics. For instance, we get a monthly Sharpe Ratio of 0.75 for this simulated portfolio. 
 
-The "P&L Contributions" tab allows decomposing the performance of the portfolio along its 2 components (S&P 500 position and US 10yr bonds position). Select "Split by asset" to see the respective contributions of these 2 components to the total P&L of the portfolio. We can see here that the 2 contributions have similar volatity metrics, which confirms that these very usual weights are indeed reasonable.
+The "P&L Contributions" tab allows decomposing the performance of the portfolio along its 2 components (S&P 500 position and US 10yr bonds position). Select "Split by asset" to see the respective contributions of these 2 components to the total P&L of the portfolio. We can see here that the 2 contributions have similar volatility metrics, which confirms that these very usual weights are indeed reasonable.
 
 Once you are familiar with the backtest results you can move to the other pages to get a more in-depth view of futures contracts and trading strategies readily available for your backtests on the platform.
 

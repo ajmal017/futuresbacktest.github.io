@@ -10,10 +10,14 @@
 - title: Backtest
   url: /docs/backtest/
 - title: Portfolio construction
+- title: Methodology
+  url: /docs/methodology/
 - title: The contracts
   url: /docs/contracts/
 - title: The strategies
   url: /docs/strategies/
+- title: Weighting
+  url: /docs/weighting/
 - title: About
 - title: Terms of service
   url: /docs/terms/

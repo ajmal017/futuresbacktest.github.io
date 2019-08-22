@@ -1,7 +1,6 @@
 ---
 title: Weighting
-permalink: /drafts/weighting/
-sitemap: false
+permalink: /docs/weighting/
 layout: default
 ---
 
