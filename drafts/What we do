@@ -1,0 +1,7 @@
+What we do
+
+FuturesBacktest is a highly configurable online platform for backtesting futures contracts portfolio without coding. You can choose from 50+ contracts for which we provide up-to-date daily settlement prices with historic data dating back to the 60' for some contracts.
+
+We let you to combine popular investment strategies such as trend following, carry trading or value applied across your investment universe. We provide also weighting methods rooted in academic literature on portfolio construction: inverse-volatility, mean-variance optimization, risk-parity…
+
+Our backtesting engine rebalances the whole portfolio at given dates, which lowers the number of trades and makes it more manageable to track. For that matter, we provide you with the last positions computed near real-time for your backtested portfolio.
