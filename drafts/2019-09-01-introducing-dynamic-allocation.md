@@ -2,6 +2,7 @@
 layout: post
 sitemap: false
 title:  "Introducing Dynamic Allocation"
+permalink: /drafts/dynamic/
 date:   2019-05-20
 author: Martin
 categories: general
