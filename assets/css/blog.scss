@@ -17,11 +17,16 @@ h2 a {
 h3{
 	font-size:19px}
 
-#blog-content p{
+#blog-content p, li{
 	font-family:"PT Serif", serif;
 	font-size:1.3em;
 	line-height:1.5;
 	margin:.5em 0 1em 0}
+
+#blog-content ol, ul {
+	padding-left: 2em;
+}
+
 .post-excerpt{
 	font-family:"PT Serif", serif;
 	font-size:1.3em;line-height:1.5}

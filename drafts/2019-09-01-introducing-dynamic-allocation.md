@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: draft_post
 sitemap: false
 title:  "Introducing Dynamic Allocation"
 permalink: /drafts/dynamic/
