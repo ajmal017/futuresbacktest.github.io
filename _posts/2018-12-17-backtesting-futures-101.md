@@ -2,13 +2,14 @@
 layout: post
 title:  "Backtesting Futures 101"
 date:   2018-12-17
-last_modified_at: 2019-01-09
+last_modified_at: 2019-10-20
 author: Martin
 categories: general
 image: /assets/school.jpg
 image-alt: School 
 image-caption: |
   Photo by Element5 Digital on <a href="https://unsplash.com/">Unsplash.com</a>
+charter: true
 ---
 
 You may be familiar with backtesting individual stocks or ETF portfolios. Futures contracts are different in some ways. We’ll discuss some of these differences and what it means for our backtests.
@@ -21,6 +22,12 @@ Futures contracts are usually traded for a short period of time, especially futu
 There are several ways to do it, depending on what we want to see. If we just want to see the absolute price of let's say WTI crude oil front contracts (the closest expiring) over time, as a proxy of spot price, we can paste settlement prices of all front contracts one after another. It does not however reflect the P&L resulting from holding a long position on such contract over the same timeframe and it can actually be far from it. The problem is that the price jump when switching from an expiring contract to the next is not P&L.
 
 To get a more accurate view of what would an investor actually see when holding a position on this contract over the same time period, we need to compute daily returns for each contract, stitch the returns of all successive front contracts and cumulate them over the chosen period[^1] to compute the total P&L of this position.
+
+Here is an example of such price adjustement on futures contract on Mexican Peso (MXP):
+
+{% include chart.html collection="blog-201812-futures-101" key="mxp" id="mxp-chart" compare="true" logscale="false" version="1" %}
+
+Because short term interest rates in peso were higher that their USD counterpart, the equity value of long position on MXP during this period actually increased (net gain) while the spot exchange rate would indicate a 50% loss if not adjusted.
 
 When retrieving futures contract time series on FuturesBacktest, roll adjustment is enabled by default, thus it simulates the P&L resulting from holding a long position over time. You can also disable roll adjustment, if you are looking for actual past prices.  
 
@@ -51,7 +58,6 @@ Taking a position on a futures contracts labelled in a currency different from y
 We will present this with an example:
 
 1. Our main account currency is USD. We bought 1000 shares of an ETF tracking EURO STOXX 50 index performance, labelled in EUR. A month later, the index (and our shares) went up 5% in EUR, but over the same period of time EUR went down 5% v.s. USD. As a result, our equity is unchanged, as our gains on the shares are erased by a loss in FX.
-
 2. We now take the same position on a futures contract on EURO STOXX 50 index, with a multiplier of x1000. A month later, the index goes up 5% and EUR goes down 5% v.s. USD. As we did not change any USD cash to take the position, we are not exposed to FX loss and end up with approximately[^3] +5% of the position size in EUR on our account.
 
 [^3]: It is actually more complicated than that; we will discuss later in more details the pricing of futures contracts, which involves also dividends and short term financing rate. Also, the gain in EUR is subject to FX gains or losses (but the exposure is limited to this EUR gain and not the whole position).

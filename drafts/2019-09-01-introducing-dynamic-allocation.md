@@ -33,10 +33,14 @@ Now, back to the point:
 
 Most of the weighting methods we propose fall under the umbrella of "Risk-Parity". This means in general that we will size position not based on contracts sizes in USD equivalent but rather on their relative "riskiness". This is especially relevant in the world of future contracts where:
 
-- the underlyings in different asset classes can feature very different risk profile (equity vs. bonds, to name a few);
-- leverage, inherent to future contracts, allows scaling position to basically every level with very little funding concerns if the level of risk stays low.
+* the underlyings in different asset classes can feature very different risk profile (equity vs. bonds, to name a few);
+* leverage, inherent to future contracts, allows scaling position to basically every level with very little funding concerns if the level of risk stays low.
 
 The term "Risk-parity" usually refers to long-only strategies, where no assumption is made on future returns. However, it is frequent also in CTA or "managed futures" strategies such as trend following (which most "managed futures" funds implement) to scale positions based on expected volatility.
+
+Example chart :
+
+{% include chart.html id="chart1" collection="blog-201910-dynamic" key="invV" %}
 
 ### Inverse volatility
 

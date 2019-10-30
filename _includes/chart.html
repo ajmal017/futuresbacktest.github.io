@@ -1,0 +1,8 @@
+<div style="position: relative; max-height:400px; width:100%; max-width: 700px; margin: 1em auto 2em auto;">
+    <canvas id="{{include.id}}"></canvas>
+    <script>
+        var ctx = document.getElementById("{{include.id}}");
+        makeChart(ctx, "{{include.collection}}", "{{include.key}}", "{{include.version}}", 
+            {{include.compare}}, {{include.logscale}});
+    </script>
+</div>
