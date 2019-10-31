@@ -23,11 +23,17 @@ There are several ways to do it, depending on what we want to see. If we just wa
 
 To get a more accurate view of what would an investor actually see when holding a position on this contract over the same time period, we need to compute daily returns for each contract, stitch the returns of all successive front contracts and cumulate them over the chosen period[^1] to compute the total P&L of this position.
 
-Here is an example of such price adjustement on futures contract on Mexican Peso (MXP):
+Here is an example of such a price adjustment on futures contracts on Mexican Peso (MXP):
 
-{% include chart.html collection="blog-201812-futures-101" key="mxp" id="mxp-chart" compare="true" logscale="false" version="1" %}
+{% include chart.html collection="blog-201812-futures-101" key="mxp" id="mxp-chart" compare="true" logscale="true" version="2" %}
 
-Because short term interest rates in peso were higher that their USD counterpart, the equity value of long position on MXP during this period actually increased (net gain) while the spot exchange rate would indicate a 50% loss if not adjusted.
+Because short term interest rates in pesos were higher that their USD counterpart, the equity value of long position on MXP during this period actually increased (net gain) while the spot exchange rate would indicate a 50% loss if not adjusted.
+
+This effect can also play the other way around. Look at this example on natural gas futures: 
+
+{% include chart.html collection="blog-201812-futures-101" key="ng" id="ng-chart" compare="true" logscale="true" version="2" %}
+
+Natural gas is expensive to store and you will pay a very high cost of carry when holding a long position on such futures contracts. In this example, you lose more than 99% of your equity! The unadjusted time series does not show the same picture with a mere 46% drop in price over the same period.
 
 When retrieving futures contract time series on FuturesBacktest, roll adjustment is enabled by default, thus it simulates the P&L resulting from holding a long position over time. You can also disable roll adjustment, if you are looking for actual past prices.  
 
@@ -58,6 +64,7 @@ Taking a position on a futures contracts labelled in a currency different from y
 We will present this with an example:
 
 1. Our main account currency is USD. We bought 1000 shares of an ETF tracking EURO STOXX 50 index performance, labelled in EUR. A month later, the index (and our shares) went up 5% in EUR, but over the same period of time EUR went down 5% v.s. USD. As a result, our equity is unchanged, as our gains on the shares are erased by a loss in FX.
+
 2. We now take the same position on a futures contract on EURO STOXX 50 index, with a multiplier of x1000. A month later, the index goes up 5% and EUR goes down 5% v.s. USD. As we did not change any USD cash to take the position, we are not exposed to FX loss and end up with approximately[^3] +5% of the position size in EUR on our account.
 
 [^3]: It is actually more complicated than that; we will discuss later in more details the pricing of futures contracts, which involves also dividends and short term financing rate. Also, the gain in EUR is subject to FX gains or losses (but the exposure is limited to this EUR gain and not the whole position).

@@ -1,5 +1,5 @@
 ---
-layout: draft_post
+layout: post
 sitemap: false
 title:  "Introducing Dynamic Allocation"
 permalink: /drafts/dynamic/
@@ -29,18 +29,24 @@ We cannot emphasize it enough: to make the most of your backtests, you do not wa
 
 Now, back to the point:
 
+## Mean-variance
+
+Mean-variance portfolio optimization is derived from the work of Markowitz on "efficient" portfolios, meaning that you get the maximum returns for a given level of risk, or the minimum risk for a given level of returns. You can find a lot of details on the internet regarding mean-variance optimization, beginning with Wikipedia.
+
+On FuturesBacktest you can try both unconstrained and constrained mean-variance optimization. In both cases we use volatility and correlations estimates, and an indicator of expected returns computed as a weighted average of the strategies you select. Constrained optimization means that we force the final positions to have the same sign as the indicator of expected returns ; it is more intuitive but it 
+
+, and constrained optimization, where we force the positions to have the same sign as the expe
+
+
+
 ## Risk-Parity strategies
 
 Most of the weighting methods we propose fall under the umbrella of "Risk-Parity". This means in general that we will size position not based on contracts sizes in USD equivalent but rather on their relative "riskiness". This is especially relevant in the world of future contracts where:
 
-* the underlyings in different asset classes can feature very different risk profile (equity vs. bonds, to name a few);
-* leverage, inherent to future contracts, allows scaling position to basically every level with very little funding concerns if the level of risk stays low.
+- the underlyings in different asset classes can feature very different risk profile (equity vs. bonds, to name a few);
+- leverage, inherent to future contracts, allows scaling position to basically every level with very little funding concerns if the level of risk stays low.
 
 The term "Risk-parity" usually refers to long-only strategies, where no assumption is made on future returns. However, it is frequent also in CTA or "managed futures" strategies such as trend following (which most "managed futures" funds implement) to scale positions based on expected volatility.
-
-Example chart :
-
-{% include chart.html id="chart1" collection="blog-201910-dynamic" key="invV" %}
 
 ### Inverse volatility
 
@@ -62,6 +68,12 @@ This mathematical definition implies that the sum of the risk contributions of a
 
 The idea of equal risk contribution portfolio is then to equalize the risk contribution of each asset, using an optimization procedure.
 
-The original description of ERC portfolio focuses on long only portfolios and does not embody any assumption of future returns. This can be seen as an issue for some managers who may have some views on expected returns. Furthermore, especially in the world of futures contracts, there is not always such a thing as a natural "long position" (take for instance futures contracts on foreign currencies). This is why we need to adapt the definition of the ERC portfolio. to retain the principle of risk contribution but to adapt the target 
+The original description of ERC portfolio focuses on long only portfolios and does not embody any assumption of future returns. This can be seen as an issue for some managers who may have some views on expected returns. Furthermore, especially in the world of futures contracts, there is not always such a thing as a natural "long position" (take for instance futures contracts on foreign currencies). This is why we need to adapt the definition of the ERC portfolio, while  retaining the principle of risk contributions.
+
+Risk contributions of long or short positions in a portfolio can be either positive or negative, depending on each asset volatility and cross-assets correlations. In the context of long/short futures contracts portfolios, we will aim at risk contributions equal to the absolute value of our indicator of expected returns, while ensuring that the sign of each position (long/short) is the same as the sign of expected returns.
+
+### Agnostic Risk Parity
+
+Me
 
 ## Mean-Variance optimization
