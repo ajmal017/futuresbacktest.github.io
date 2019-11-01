@@ -64,7 +64,6 @@ Taking a position on a futures contracts labelled in a currency different from y
 We will present this with an example:
 
 1. Our main account currency is USD. We bought 1000 shares of an ETF tracking EURO STOXX 50 index performance, labelled in EUR. A month later, the index (and our shares) went up 5% in EUR, but over the same period of time EUR went down 5% v.s. USD. As a result, our equity is unchanged, as our gains on the shares are erased by a loss in FX.
-
 2. We now take the same position on a futures contract on EURO STOXX 50 index, with a multiplier of x1000. A month later, the index goes up 5% and EUR goes down 5% v.s. USD. As we did not change any USD cash to take the position, we are not exposed to FX loss and end up with approximately[^3] +5% of the position size in EUR on our account.
 
 [^3]: It is actually more complicated than that; we will discuss later in more details the pricing of futures contracts, which involves also dividends and short term financing rate. Also, the gain in EUR is subject to FX gains or losses (but the exposure is limited to this EUR gain and not the whole position).

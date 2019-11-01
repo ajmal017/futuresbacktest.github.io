@@ -1,15 +1,16 @@
 ---
-layout: post
+layout: draft_post
 sitemap: false
 title:  "Introducing Dynamic Allocation"
 permalink: /drafts/dynamic/
-date:   2019-05-20
+date:   2019-10-20
 author: Martin
 categories: general
-image: /assets/school.jpg
-image-alt: School 
+image: /assets/gears.jpg
+image-alt: Gears
 image-caption: |
-  Photo by Element5 Digital on <a href="https://unsplash.com/">Unsplash.com</a>
+    Public domain photo by <a href="https://pxhere.com/">Pxhere</a>
+charter: true
 ---
 
 We are introducing options to compute assets weights dynamically at each rebalancing date, featuring mean-variance and risk-parity methods. We'll walk you through these new options.
@@ -31,13 +32,13 @@ Now, back to the point:
 
 ## Mean-variance
 
-Mean-variance portfolio optimization is derived from the work of Markowitz on "efficient" portfolios, meaning that you get the maximum returns for a given level of risk, or the minimum risk for a given level of returns. You can find a lot of details on the internet regarding mean-variance optimization, beginning with Wikipedia.
+Mean-variance portfolio optimization is derived from the work of Markowitz on "efficient" portfolios, meaning that you get the maximum returns for a given level of risk, or the minimum risk for a given level of returns. You can find a lot of details on the internet regarding mean-variance optimization and more generally the "Modern Portfolio Theory", beginning with [Wikipedia](https://en.wikipedia.org/wiki/Modern_portfolio_theory).
 
-On FuturesBacktest you can try both unconstrained and constrained mean-variance optimization. In both cases we use volatility and correlations estimates, and an indicator of expected returns computed as a weighted average of the strategies you select. Constrained optimization means that we force the final positions to have the same sign as the indicator of expected returns ; it is more intuitive but it 
+On FuturesBacktest you can try both unconstrained and constrained mean-variance optimization. In both cases we use volatility and correlations estimates, and an indicator of expected returns computed as a weighted average of the strategies you select. Constrained optimization means that we force the final positions to have the same sign as the computed indicator of expected returns; it is more intuitive but it will force some weights to zero. Unconstrained optimization will yield short positions while your indicators says positive expected returns and vice-versa, but it is easier to compute as their is a well known analytical solution for this problem.
 
-, and constrained optimization, where we force the positions to have the same sign as the expe
+The idea behind mean-variance optimization is that positive correlation between two assets with different expected returns can be exploited to enhance risk-adjusted returns: the asset with the lower expected returns can be used to hedge the position on the other one, thus reducing risk while earning the difference between the two expected returns (it works also in case of negative correlation).
 
-
+The main problem of mean-variance optimization is that it is very sensitive to correlations and returns estimates and that it will tend to concentrate portfolios on a small number of bets. As a consequence, thus theoretically appealing, it is not widely used by practitioners as is. 
 
 ## Risk-Parity strategies
 
@@ -68,12 +69,24 @@ This mathematical definition implies that the sum of the risk contributions of a
 
 The idea of equal risk contribution portfolio is then to equalize the risk contribution of each asset, using an optimization procedure.
 
-The original description of ERC portfolio focuses on long only portfolios and does not embody any assumption of future returns. This can be seen as an issue for some managers who may have some views on expected returns. Furthermore, especially in the world of futures contracts, there is not always such a thing as a natural "long position" (take for instance futures contracts on foreign currencies). This is why we need to adapt the definition of the ERC portfolio, while  retaining the principle of risk contributions.
+The original description[^1] of ERC portfolio focuses on long only portfolios and does not embody any assumption of future returns. This can be seen as an issue for some managers who may have some views on expected returns. Furthermore, especially in the world of futures contracts, there is not always such a thing as a natural "long position" (take for instance futures contracts on foreign currencies). This is why we need to adapt the definition of the ERC portfolio, while  retaining the principle of risk contributions.
+
+[^1] {% include citation.html key="maillard2009" %}
 
 Risk contributions of long or short positions in a portfolio can be either positive or negative, depending on each asset volatility and cross-assets correlations. In the context of long/short futures contracts portfolios, we will aim at risk contributions equal to the absolute value of our indicator of expected returns, while ensuring that the sign of each position (long/short) is the same as the sign of expected returns.
 
 ### Agnostic Risk Parity
 
-Me
+Agnostic risk parity is a relatively newer portfolio method. Its premises are to build "synthetic assets" based on linear combinations of the actual assets in the portfolio, which are uncorrelated with each other. Based on these set of uncorrelated synthetic assets, the idea is to size positions proportionally to the expected returns of original assets. The original article[^2] explains this in greater details.
 
-## Mean-Variance optimization
+[^2] {% include citation.html key="benichou2017" %}
+
+## Conclusion
+
+To sum up, we have gathered examples of allocation with all portfolio weighting methods, using a universe of 14 bonds and equity futures contracts, targeting 10% annualized volatility:
+
+{% include chart.html collection="blog-201910-dynamic" key="long" id="long-chart" compare="true" logscale="true" version="1" %}
+
+As you can see, the results look very similar for these long portfolios, with an annualized Sharpe Ratio of roughly 0.95 over the period.
+
+We will cover in the next articles application of these weighting methods to trend following, carry and value strategies to uncover their benefits in this context.
