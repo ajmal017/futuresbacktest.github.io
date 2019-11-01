@@ -1,9 +1,7 @@
 ---
-layout: draft_post
-sitemap: false
+layout: post
 title:  "Introducing Dynamic Allocation"
-permalink: /drafts/dynamic/
-date:   2019-10-20
+date:   2019-10-31
 author: Martin
 categories: general
 image: /assets/gears.jpg
@@ -71,7 +69,7 @@ The idea of equal risk contribution portfolio is then to equalize the risk contr
 
 The original description[^1] of ERC portfolio focuses on long only portfolios and does not embody any assumption of future returns. This can be seen as an issue for some managers who may have some views on expected returns. Furthermore, especially in the world of futures contracts, there is not always such a thing as a natural "long position" (take for instance futures contracts on foreign currencies). This is why we need to adapt the definition of the ERC portfolio, while  retaining the principle of risk contributions.
 
-[^1] {% include citation.html key="maillard2009" %}
+[^1]: {% include citation.html key="maillard2009" %}
 
 Risk contributions of long or short positions in a portfolio can be either positive or negative, depending on each asset volatility and cross-assets correlations. In the context of long/short futures contracts portfolios, we will aim at risk contributions equal to the absolute value of our indicator of expected returns, while ensuring that the sign of each position (long/short) is the same as the sign of expected returns.
 
@@ -79,7 +77,7 @@ Risk contributions of long or short positions in a portfolio can be either posit
 
 Agnostic risk parity is a relatively newer portfolio method. Its premises are to build "synthetic assets" based on linear combinations of the actual assets in the portfolio, which are uncorrelated with each other. Based on these set of uncorrelated synthetic assets, the idea is to size positions proportionally to the expected returns of original assets. The original article[^2] explains this in greater details.
 
-[^2] {% include citation.html key="benichou2017" %}
+[^2]: {% include citation.html key="benichou2017" %}
 
 ## Conclusion
 
