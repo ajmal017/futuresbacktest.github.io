@@ -44,28 +44,24 @@ main.posts {
 .navbar-nav > a {
   margin-left: 15px;
 }
-
-.navbar-brand {
-  font-family: "Roboto";
-  padding-left: 35px;
-  height: 35px;
-  margin-top: -7px;
-  background-image: url('/assets/icons/icon-white.png');
-  background-size: 24px 24px;
-  background-position: 0 6px;
-  background-repeat: no-repeat;
-  font-size: 1.4em;
-}
-.navbar-brand:before {
-  content: ' ';
-  width: 0;
-  height: 0;
-  position: absolute;
-}
-.navbar-brand:before, .navbar-brand:hover, .navbar-brand:focus {
-  color: #18BC9C !important;
-  background-image: url('/assets/icons/icon-green.png');
-}
+.navbar-brand { 
+  font-family: "Roboto"; 
+  height: 35px; 
+  margin-top: -7px; 
+  font-size: 1.4em; 
+} 
+.navbar-brand svg { 
+  margin: -2px 5px 2px 0; 
+} 
+.navbar-brand path, .navbar-brand rect { 
+  stroke: white; 
+} 
+.navbar-brand:hover path, .navbar-brand:hover rect, .navbar-brand:focus path, .navbar-brand:focus rect { 
+  stroke: #18BC9C; 
+} 
+.navbar-brand:hover, .navbar-brand:focus { 
+  color: #18BC9C !important; 
+} 
 
 .navbar.fixed-top {
     box-shadow: 0px 1px 9px 1px #00000069;
