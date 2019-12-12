@@ -78,7 +78,9 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary {% if page.layout == 'posts'%}static-top{% else %}fixed-top{% endif %}" style="border-radius:0">
         <div class="container">
-            <a class="navbar-brand" href="{{ site.data. global.main_url }}" target="_blank">{{ site.data.global.title }}</a>
+            <a class="navbar-brand" href="{{ site.data. global.main_url }}" target="_blank">
+              <svg height="22" viewBox="0 0 400 400" width="22" class="" version="1.1"><g transform="translate(0 -652.36)"><g fill="none" stroke="#2c3e50" stroke-width="30"><rect height="340" width="340" x="30" y="682.36"></rect><path d="m30 1022.4 137.27-195.15 72.122 46.162 130.6-191.01"></path></g></g></svg> {{ site.data.global.title }}
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -86,12 +88,16 @@
 
             </div>
             {% if include.type == "404" %}
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <div class="navbar-nav">
-                    <a class="nav-link" href="/overview/">Overview</a>
-                    <a class="nav-link" href="/explore/">Explore</a>
-                    <a class="nav-link" href="/backtest/">Backtest</a>
-                </div>
+            <div class="navbar-collapse collapse">
+              <div class="mr-auto navbar-nav">
+                <a href="/overview/" class="nav-link" data-rb-event-key="/overview/">Overview</a>
+                <a href="/explore/" class="nav-link" data-rb-event-key="/explore/">Explore</a>
+                <a href="/backtest/" class="nav-link" data-rb-event-key="/backtest/">Backtest</a>
+              </div>
+              <div class="navbar-nav">
+                <a href="/docs/" class="nav-link">Docs</a>
+                <a href="/blog/" class="nav-link">Blog</a>
+              </div>
             </div>
             {% else %}
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
