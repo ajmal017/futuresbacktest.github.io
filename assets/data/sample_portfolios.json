@@ -1,5 +1,25 @@
 [{
-  "name": "Trend Following A",
-  "description": "A global trend following strategy",
-  "data": "XXXXX"
+  "name": "60/40 (US)",
+  "description": "60% Equity + 40% Bonds Benchmark allocation (US only)",
+  "data": "wEbcEI1J"
+},{
+  "name": "60/40 (Global)",
+  "description": "60% Equity + 40% Bonds Benchmark allocation (global)",
+  "data": "aq528L96"
+},{
+  "name": "Stocks/Bonds Risk Parity",
+  "description": "A long-only risk parity allocation on global equity indices and bonds",
+  "data": "C6djLT8a"
+},{
+  "name": "Diversified Trend Following",
+  "description": "A diversified trend following portfolio",
+  "data": "M9EqEHcJR"
+},{
+  "name": "Diversified Carry Trading",
+  "description": "A diversified \"carry\" portfolio",
+  "data": "aeYJa8nC"
+},{
+  "name": "Diversified Trend+Carry",
+  "description": "A diversified portfolio combining Trend following and Carry allocations",
+  "data": "0YFBu9mm"
 }]
